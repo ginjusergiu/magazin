@@ -1,0 +1,13 @@
+<div class="container">
+    <div *ngFor="let produs of products" class="box">
+        <a routerLink="/produs/{{produs._id}}"> <img src={{produs.img}} alt="">
+            <h2>
+                {{produs.nume}}
+            </h2>
+            <h3>
+                {{produs.pret}} ron
+            </h3>
+        </a>
+    </div>
+
+</div>

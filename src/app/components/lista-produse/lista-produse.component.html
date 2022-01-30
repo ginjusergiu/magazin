@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="header">
+        <h2>Lista produse</h2>
+        <a routerLink="/adauga-produs"><button mat-stroked-button>+ Adauga produs</button></a>
+    </div>
+    <div class="content">
+        <table>
+            <tr>
+                <th width="50%">Nume</th>
+                <th>Pret</th>
+                <th>Actiune</th>
+                <th>Img</th>
+            </tr>
+            <tr *ngFor="let produs of products">
+                <th class="name">{{produs.nume}}</th>
+                <th class="pret">{{produs.pret}} ron</th>
+                <th>
+                    <button mat-stroked-button (click)="delete(produs._id)">Stergere</button>
+                </th>
+                <th><img src={{produs.img}} width="40px" alt=""></th>
+            </tr>
+        </table>
+    </div>
+</div>

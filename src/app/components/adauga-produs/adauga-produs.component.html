@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="header">
+        <h2>Adauga produs</h2>
+        <a routerLink="/lista-produse"><button mat-stroked-button>Lista produse</button></a>
+    </div>
+    <div class="content">
+          <mat-grid-list cols="3" rowHeight="60px" [gutterSize]="'16px'">
+            <mat-grid-tile colspan="1" rowspan="1">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Nume</mat-label>
+                    <input matInput [(ngModel)]="produs.nume">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="1">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Pret</mat-label>
+                    <input matInput [(ngModel)]="produs.pret" type="number">
+                  </mat-form-field>
+            </mat-grid-tile>
+
+            <mat-grid-tile colspan="1" rowspan="1">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Img</mat-label>
+                    <input matInput [(ngModel)]="produs.img">
+                  </mat-form-field>
+              </mat-grid-tile>
+
+              <mat-grid-tile colspan="3" rowspan="1">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Descriere</mat-label>
+                    <textarea matInput [(ngModel)]="produs.descriere"></textarea>
+                  </mat-form-field>
+              </mat-grid-tile>
+
+          </mat-grid-list>
+
+    </div>
+    <button mat-raised-button color="primary" id="adauga" (click)="creazaProdus()">Adauga produs</button>
+</div>
+
+
