@@ -21,6 +21,9 @@ export class PrimaPaginaComponent implements OnInit {
   getData(){
     this.api.getProduct().subscribe((products)=>{
       this.products = JSON.parse(products)
+      for(let i=0;i<this.products.length;i++){
+        this.products[i].img =  this.products[i].img ? this.products[i].img : "http://mwgaze.ro/wp-content/uploads/2019/12/placeholder.png"
+      }
     })
   }
 
